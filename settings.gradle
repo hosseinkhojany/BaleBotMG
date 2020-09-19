@@ -1,0 +1,3 @@
+include ':TB'
+include ':app'
+rootProject.name = "BaleBotMG"

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "james_gosling.projects.balebotmg"
+        minSdkVersion 25
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(':TB')
+
+//    implementation 'com.github.pengrad:java-telegram-bot-api:4.9.0'
+//    implementation 'com.ajts.library.telegrambot:telegrambotlibrary:1.0.0'
+//    implementation group: 'org.telegram', name: 'telegrambots', version: '4.9.1'
+
+//    implementation "com.fasterxml.jackson.core:jackson-annotations:2.11.2"
+//    implementation "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.11.2"
+//    implementation "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.11.2"
+//    implementation "com.fasterxml.jackson.core:jackson-databind:2.11.2"
+//    implementation "org.glassfish.jersey:jersey-bom:2.31"
+//    implementation "org.glassfish.jersey.inject:jersey-hk2:2.31"
+//    implementation "org.glassfish.jersey.media:jersey-media-json-jackson:2.31"
+//    implementation "org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.31"
+//    implementation "org.glassfish.jersey.core:jersey-server:2.31"
+//    testImplementation "org.glassfish.jersey.test-framework:jersey-test-framework-core:2.31"
+//    testImplementation "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.31"
+//    implementation "org.json:json:20200518"
+//    implementation "org.apache.httpcomponents:httpclient:4.5.12"
+//    implementation "org.apache.httpcomponents:httpmime:4.5.12"
+//    implementation "com.google.inject:guice:4.2.3"
+//    implementation "com.google.guava:guava:29.0-android"
+//    implementation "commons-io:commons-io:2.8.0"
+
+
+
+}
