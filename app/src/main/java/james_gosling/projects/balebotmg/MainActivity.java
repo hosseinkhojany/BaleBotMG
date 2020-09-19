@@ -1,5 +1,6 @@
 package james_gosling.projects.balebotmg;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         bot.setUpdatesListener(updates -> {
 
             runOnUiThread(new Runnable() {
+                @SuppressLint("SetTextI18n")
                 @Override
                 public void run() {
                     for (int i = 0; i < updates.size(); i++) {
